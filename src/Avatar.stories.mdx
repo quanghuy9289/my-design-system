@@ -1,7 +1,7 @@
-import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { withKnobs, select, boolean } from '@storybook/addon-knobs';
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks";
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 
-import { Avatar } from './Avatar';
+import { Avatar } from "./Avatar";
 
 <Meta title="Design System|Avatar" component={Avatar} />
 
@@ -13,11 +13,7 @@ Use an avatar for attributing actions or content to specific users. The user’s
 
 <Preview withToolbar>
   <Story name="standard">
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
+    <Avatar size="large" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
   </Story>
 </Preview>
 
@@ -33,26 +29,10 @@ Avatar is used to represent a person or an organization. By default the avatar s
 
 <Story name="sizes">
   <div>
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="medium"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="small"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="tiny"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
+    <Avatar size="large" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="medium" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="small" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="tiny" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
   </div>
 </Story>
 
@@ -88,8 +68,8 @@ Experiment with this story with Knobs addon in Canvas mode.
 
 <Story name="knobs" parameters={{ decorators: [withKnobs] }}>
   <Avatar
-    loading={boolean('Loading')}
-    size={select('Size', ['tiny', 'small', 'medium', 'large'])}
+    loading={boolean("Loading")}
+    size={select("Size", ["tiny", "small", "medium", "large"])}
     username="Dominic Nguyen"
     src="https://avatars2.githubusercontent.com/u/263385"
   />

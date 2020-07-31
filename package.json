@@ -1,5 +1,5 @@
 {
-  "name": "my-design-system",
+  "name": "huy-design-system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,11 +15,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -s public --docs",
     "chromatic": "npx chromatic --project-token=34lvcg7bpti"
   },
   "eslintConfig": {
@@ -37,8 +37,15 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
+    "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
@@ -47,9 +54,15 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^5.3.19",
+    "auto": "^9.49.1",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.0.0",
+    "cross-env": "^7.0.2",
     "prettier": "^2.0.5",
     "react-is": "^16.13.1"
-  }
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/quanghuy9289/my-design-system.git",
+  "author": "HuyNgo <quanghuy9289@gmail.com>",
+  "license": "MIT"
 }
